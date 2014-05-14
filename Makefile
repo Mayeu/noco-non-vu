@@ -5,7 +5,9 @@ CHR_PATH=chrome
 COMMON_JS=js
 
 # Exported vars
-export OUTPUT_PATH=$(CURDIR)
+export ROOT_PATH=$(CURDIR)
+export COMMON_PATH=$(ROOT_PATH)/common
+export NOCO_JS=noco-non-vu.js
 
 .PHONY: clean firefox chrome
 
@@ -15,8 +17,8 @@ firefox:
 	+$(MAKE) -C $(FF_PATH)
 
 chrome:
-	chromium --pack-extension=chrome --pack-extension-key=chrome.pem
-	mv chrome.crx noco-non-vu.crx
+	+$(MAKE) -f chrome.mk
 
 clean:
-	rm noco-non-vu.{xpi,crx}
+	$(MAKE) -C $(FF_PATH) clean
+	$(MAKE) -f chrome.mk clean
