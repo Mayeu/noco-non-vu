@@ -1,17 +1,19 @@
-/* noco-non-vu.js
- *
- * This script simply inject the jquery code needed to hide view items at the
- * end of the body
- */
+$(document).ready(function() {
+   //console.log("DEBUG: page ready, gonna modify this.");
 
-//console.log("DEBUG: script injection start");
+   // Override the append function to emit and "append" event when used
+   (function($) {
+      var origAppend = $.fn.append;
 
-// Create a script element
-var s = document.createElement("script");
-// Get the url of the jquery script
-s.src = chrome.extension.getURL("js/jquery-noco-non-vu.js");
+      $.fn.append = function () {
+         return origAppend.apply(this, arguments).trigger("append", this);
+      };
+   })(jQuery);
 
-// Append dat shit
-document.body.appendChild(s);
-
-//console.log("DEBUG: script append happened!");
+   // Bind the append event to the item container, and hide all read items when
+   // append is emitted
+   $("#module-1-0-0-0-0").bind("append", function() {
+      $('.mark-read').closest('.item').hide();
+      //console.log("DEBUG: hidded!");
+   });
+});
