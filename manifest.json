@@ -1,0 +1,13 @@
+{
+   "manifest_version": 2,
+   "name": "NocoNonVu",
+   "version": "0.1",
+   "description": "Ajoute un vrai filtre 'non vu' sur noco.tv",
+   "content_scripts": [
+   {
+      "matches": ["http://noco.tv/*", "https://noco.tv/*"],
+      "js": ["js/noco-non-vu.js"],
+      "run_at": "document_end"
+   }],
+   "web_accessible_resources": ["js/jquery-noco-non-vu.js"]
+}
