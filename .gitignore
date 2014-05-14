@@ -2,3 +2,9 @@
 noco-non-vu.xpi
 noco-non-vu.crx
 chrome.pem
+
+# firefox
+firefox/data/noco-non-vu.js
+
+# chrome
+chrome/js/noco-non-vu.js
