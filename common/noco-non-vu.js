@@ -36,6 +36,24 @@ function add_non_vu_button() {
    $('#tags-editeur').before(button_nonvu);
 
    // Make the other button aware of it
+   inject_non_vu_button();
+}
+
+/*
+ * Inject non vu button
+ *
+ * The system is a little weird, basically every button have a list of class in
+ * their own class, representing the buttons that are compatible with it.
+ *
+ * i.e.: if you push "Magazine", "Action" will be disable because their is no
+ * "Magazine" about "Action"
+ *
+ * This function made all the button aware that "Non vu" exist, and that it is
+ * always compatible with everything
+ *
+ */
+function inject_non_vu_button() {
+   // Currently only inject in the editor tag. Will be better in the future
    $('#editeur-nol').addClass('filtre-nv');
 }
 
