@@ -53,8 +53,8 @@ function add_non_vu_button() {
  *
  */
 function inject_non_vu_button() {
-   // Currently only inject in the editor tag. Will be better in the future
-   $('#editeur-nol').addClass('filtre-nv');
+   //Inject everywhere in all tags
+   $('#tags-editeur, #tags-type, #tags-theme').children().addClass('filtre-nv');
 }
 
 /*
