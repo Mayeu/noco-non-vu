@@ -73,14 +73,14 @@ function show_read_items() {
 
 function toggle_nonvu() {
    if( $('#filtre-nv').hasClass('disabled') ) {
-      hide_read_items()
+      hide_read_items();
 
-         // Bind the append event to the item container, and hide all read items when
-         // append is emitted
-         $("#module-1-0-0-0-0").bind("append", function() {
-            hide_read_items()
-            //console.log("DEBUG: hidded!");
-         });
+      // Bind the append event to the item container, and hide all read items when
+      // append is emitted
+      $("#module-1-0-0-0-0").bind("append", function() {
+         hide_read_items()
+         //console.log("DEBUG: hidded!");
+      });
 
       // remove disabled and switch to enabled
       $('#filtre-nv').removeClass('disabled').addClass('enabled');
