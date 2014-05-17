@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "NocoNonVu",
-   "version": "0.2",
+   "version": "0.3",
    "description": "Ajoute un vrai filtre 'non vu' sur noco.tv",
    "content_scripts": [
    {

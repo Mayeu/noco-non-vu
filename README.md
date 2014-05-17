@@ -7,5 +7,5 @@ les émissions (cache complètement les émissions vues).
 
 ## Download
 
-* [Firefox](https://github.com/Mayeu/noco-non-vu/releases/download/0.2.0/noco-non-vu.xpi)
-* [Chrome](https://github.com/Mayeu/noco-non-vu/releases/download/0.2.0/noco-non-vu.crx)
+* [Firefox](https://github.com/Mayeu/noco-non-vu/releases/download/0.3.0/noco-non-vu.xpi)
+* [Chrome](https://github.com/Mayeu/noco-non-vu/releases/download/0.3.0/noco-non-vu.crx)
